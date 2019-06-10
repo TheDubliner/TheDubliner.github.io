@@ -1,0 +1,8 @@
+div.result {
+    visibility: hidden;
+}
+
+.card {
+    margin: 5px;
+    width: 350px;
+}
