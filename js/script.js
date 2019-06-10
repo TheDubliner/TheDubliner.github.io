@@ -216,15 +216,20 @@ class CarpeDiem {
 }
 
 $(document).ready(function() {
+    var locale = window.navigator.userLanguage || window.navigator.language;
+    moment.locale(locale);
     $('input[name="birthday"]').daterangepicker({
         singleDatePicker: true,
         showDropdowns: true,
         minYear: 1901,
-        maxYear: parseInt(moment().format('YYYY'),10)
+        maxYear: parseInt(moment().format('YYYY'),10),
+        locale: {
+            format: 'DD/MM/YYYY'
+        }
     });
     $("#carpe-diem").on('click', function () {
         $("#result").empty();
-        let date = new CarpeDiem(moment.utc($("#birthday").val(), "MM/DD/YYYY"));
+        let date = new CarpeDiem(moment.utc($("#birthday").val(), "DD/MM/YYYY"));
         date.birthdays.forEach(function (item) {
             let container = $('<div />', {
                 id: item.type,
