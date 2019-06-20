@@ -227,6 +227,17 @@ $(document).ready(function() {
             format: 'DD/MM/YYYY'
         }
     });
+
+    $('#Astronomical').on('click', function () {
+        $(".Astronomical").toggle()
+    });
+    $('#Mathematical').on('click', function () {
+        $(".Mathematical").toggle()
+    });
+    $('#Aesthetic').on('click', function () {
+        $(".Aesthetic").toggle()
+    });
+
     $("#carpe-diem").on('click', function () {
         $("#result").empty();
         let date = new CarpeDiem(moment.utc($("#birthday").val(), "DD/MM/YYYY"));

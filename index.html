@@ -16,9 +16,33 @@
 
             <p>Enter the anniversary you want to celebrate below and find an excuse for the next party!</p>
             <form class="birthday" action="index.html" method="post">
-                Anniversary:
-                <input type="text" name="birthday" id="birthday" class="birthday" label="Text" value="01/01/1984" />
-                <button id="carpe-diem" type="button" class="btn btn-primary" value="Try it">Try it</button>
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Anniversary:</legend>
+                    <input type="text" name="birthday" id="birthday" class="birthday" label="Text" value="01/01/1984" />
+                    <button id="carpe-diem" type="button" class="btn btn-primary" value="Try it">Try it</button>
+                </div>
+
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Types:</legend>
+                    <div class="form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="Astronomical" id="Astronomical" checked>
+                      <label class="form-check-label" for="Astronomical">
+                        Astronomical
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="Mathematical" id="Mathematical" checked>
+                      <label class="form-check-label" for="Mathematical">
+                        Mathematical
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="Aesthetic" id="Aesthetic" checked>
+                      <label class="form-check-label" for="Aesthetic">
+                        Aesthetic
+                      </label>
+                    </div>
+                </div>
             </form>
             <div id="result" class="row justify-content-center">
             </div>
