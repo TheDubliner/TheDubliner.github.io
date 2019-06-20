@@ -29,11 +29,11 @@ class CarpeDiem {
     }
 
     get days() {
-        return this.calcDiff();
+        return this.calcDiff(this.date);
     }
 
-    calcDiff() {
-        return this.date.diff(this.birthday, 'days');
+    calcDiff(reference) {
+        return reference.diff(this.birthday, 'days');
     }
 
     get birthdays() {
@@ -211,7 +211,7 @@ class CarpeDiem {
     }
 
     generateText(birthday, lang='en-gb') {
-        return [`Congratulations! Your ${nth(birthday.ordinal)} ${birthday.type} birthday is on ${birthday.date.format('LL')}!`, `Only ${birthday.daysToGo} days to go!`]
+        return [`Congratulations! Your ${nth(birthday.ordinal)} ${birthday.type} birthday is on ${birthday.date.format('LL')}! That’s ${this.calcDiff(birthday.date).toLocaleString()} days since the beginning.`, `Only ${birthday.daysToGo.toLocaleString()} days to go!`]
     }
 }
 
