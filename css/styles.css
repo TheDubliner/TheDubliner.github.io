@@ -6,3 +6,15 @@ div.result {
     margin: 5px;
     width: 350px;
 }
+
+.Astronomical {
+    background-color: #ffbdbd;
+}
+
+.Mathematical {
+    background-color: #e1f7d5;
+}
+
+.Aesthetic {
+    background-color: #c9c9ff;
+}
